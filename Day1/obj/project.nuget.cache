@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gicc1+riE2kbuT1aUJEIMr04K5XMlj/5LEwjr1xm+y7U6FmIxGTofm1qW2LGrQyYUl1qpUmcAvYazjn4RYa9aA==",
+  "success": true,
+  "projectFilePath": "/Users/lucapangerc/workspace/AoC2022/Day1/Day1.fsproj",
+  "expectedPackageFiles": [
+    "/Users/lucapangerc/.nuget/packages/fsharp.core/6.0.4/fsharp.core.6.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
