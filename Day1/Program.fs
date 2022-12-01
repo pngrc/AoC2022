@@ -28,4 +28,5 @@ let sortedSumCalories =
 let highest = sortedSumCalories |> Seq.head
 printfn $"Highest: %i{highest}"
 
-// let printSeq = Seq.iter (printf "%A ") sortedSumCalories
+let highest3 = sortedSumCalories |> Seq.take 3 |> Seq.sum
+printf $"Highest_3: %i{highest3}"
