@@ -1,12 +1,31 @@
-﻿open System.IO
+﻿module Day1
 
-let readLines (filePath:string) = seq {
-    use sr = new StreamReader (filePath)
-    while not sr.EndOfStream do
-        yield sr.ReadLine ()
-}
+open System.IO
+open FSharpPlus
 
-let inputs = readLines "/Users/lucapangerc/workspace/AoC2022/Day1/inputs/test_input.txt"
-let printSeq seq1 = Seq.iter (printf "%A ") seq1
+let readLines (filePath: string) =
+    seq {
+        use sr = new StreamReader(filePath)
 
-printSeq inputs
+        while not sr.EndOfStream do
+            yield sr.ReadLine()
+    }
+
+let calories =
+    readLines (__SOURCE_DIRECTORY__ + "/inputs/real_input.txt")
+
+let splitCalories =
+    calories
+    |> Seq.split [ [ "" ] ]
+    |> Seq.map (Seq.map int)
+
+let sumCalories =
+    splitCalories |> Seq.map Seq.sum
+
+let sortedSumCalories =
+    sumCalories |> Seq.sortDescending
+
+let highest = sortedSumCalories |> Seq.head
+printfn $"Highest: %i{highest}"
+
+// let printSeq = Seq.iter (printf "%A ") sortedSumCalories
